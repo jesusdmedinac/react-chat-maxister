@@ -1,5 +1,7 @@
 import React from 'react'
 import Markdown from 'react-markdown'
+import { Icon } from '@rmwc/icon';
+import '@rmwc/icon/icon.css';
 import { Avatar } from '@rmwc/avatar';
 import '@rmwc/avatar/avatar.css';
 import Image from 'next/image'
@@ -23,10 +25,9 @@ export default function ChatMessages({ messages }) {
               <div className='message-avatar'>
                 {
                   author == "Alumno" ?
-                    <Avatar
-                      src="/logo - maxister.png"
-                      size="xsmall"
-                      className='message-avatar-icon'
+                    <Icon
+                      icon={{ icon: 'person', size: 'xlarge' }}
+                      style={{ color: '#FFF' }}
                     />
                     :
                     <Image
