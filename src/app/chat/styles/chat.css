@@ -1,0 +1,25 @@
+.chat {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  padding: 10px;
+  align-items: stretch;
+}
+
+.chat-input {
+  padding: 10px;
+  display: flex;
+}
+
+.chat-input input {
+  flex: 1;
+}
+
+.chat-input button {
+  margin: 10px;
+}
+
+.chat-messages {
+  padding: 10px;
+  flex: 1;
+}
