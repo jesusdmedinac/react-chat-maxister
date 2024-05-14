@@ -1,5 +1,9 @@
 import React from 'react'
 import Markdown from 'react-markdown'
+import { Avatar } from '@rmwc/avatar';
+import '@rmwc/avatar/avatar.css';
+import Image from 'next/image'
+import logo from '../../../../public/logo - maxister.png';
 
 export default function ChatMessages({ messages }) {
   return (
@@ -16,6 +20,24 @@ export default function ChatMessages({ messages }) {
           const markdown = jsonMessage.content;
           return (
             <li key={index}>
+              <div className='message-avatar'>
+                {
+                  author == "Alumno" ?
+                    <Avatar
+                      src="/logo - maxister.png"
+                      size="xsmall"
+                      className='message-avatar-icon'
+                    />
+                    :
+                    <Image
+                      src={logo}
+                      alt="Picture of the author"
+                      width={32}
+                      height={32}
+                      className='message-avatar-icon'
+                    />
+                }
+              </div>
               <div className="message-content">
                 <p><strong>{author}</strong></p>
                 <Markdown>{markdown}</Markdown>

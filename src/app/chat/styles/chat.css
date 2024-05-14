@@ -11,7 +11,7 @@
   display: flex;
 }
 
-.chat-input input {
+.chat-input label {
   flex: 1;
 }
 
@@ -22,4 +22,38 @@
 .chat-messages {
   padding: 10px;
   flex: 1;
+}
+
+.chat-messages li {
+  list-style: none;
+}
+
+.message-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.message-avatar .message-avatar-icon {
+  font-size: 24px;
+  color: #fff;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.chat-messages li {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;;
+}
+
+.message-content {
+  flex-grow: 1;
 }
